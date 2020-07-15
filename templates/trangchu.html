@@ -1,0 +1,98 @@
+<html>
+    <head>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"></script>    
+<meta charset="UTF-8">
+	<style>
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: 990000;
+	}
+
+	li {
+	  float: left;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  margin-left: 55px;
+	}
+
+	li a:hover {
+	  background-color: #111;
+	}
+	
+	div.fixed {
+		  position: absolute;
+		  left: 350;
+	}
+</style>
+	</head>
+		<nav class="navbar navbar-dark bg-primary justify-content-center">
+			<h3 class="text-white" align="center" style = "font-size:38px">ỨNG DỤNG HỖ TRỢ CHẨN ĐOÁN BỆNH TIỂU ĐƯỜNG BẰNG PHƯƠNG PHÁP HỌC MÁY</h3>
+		</nav>
+	<ul>
+		<li><a class="active" href="/">HỖ TRỢ CHẨN ĐOÁN</a></li>
+		<li><a href="/uploadFiledudoan">NHẬP FILE CHẨN ĐOÁN</a></li>
+		<li><a href="/thongtindulieu">THÔNG TIN DỮ LIỆU</a></li>
+		<li><a href="/ketquathinghiem">KẾT QUẢ THÍ NGHIỆM</a></li>
+		<li><a href="/thongtinsanpham">THÔNG TIN SẢN PHẨM</a></li>
+
+  
+	</ul>
+    </head>
+    <body style="background-color: #e6ffee;">
+		<form action="predict/" method="POST" align="center">
+			<h3 style= "margin-right:200px;">BẠN VUI LÒNG NHẬP CHỈ SỐ</h3>
+			<div class= "fixed">
+				<label >Chỉ số Pregnancies: </label>
+			</div>
+			<input name="msg1" id="msg1" style="margin-right: 10px;">
+
+			<br></br>
+            <div class= "fixed">
+                <label>Chỉ số Glucose:</label>
+				<span></span>
+            </div>
+            <input name="msg2" id="msg2"style="margin-right: 10px;">
+			<br></br>	
+			<div class= "fixed">
+                <label>Chỉ số BloodPressure:</label>
+            </div>
+			<input name="msg3" id="msg3" style="margin-right: 10px;">
+			<br></br>	
+			<div class= "fixed">
+                <label>Chỉ số SkinThickness:</label>
+            </div>
+			<input name="msg4" id="msg4" style="margin-right: 10px;">
+			<br></br>	
+			<div class= "fixed">
+                <label>Chỉ số Insulin:</label>
+            </div>
+			<input name="msg5" id="msg5" style="margin-right: 10px;">
+			<br></br>
+            <div class= "fixed">
+                <label>Chỉ số BMI:</label>
+            </div>
+			<input name="msg6" id="msg6" style="margin-right: 10px;">
+			<br></br>	
+			<div class= "fixed">
+                <label>Chỉ số DiabetesPedigreeFunction:</label>
+            </div>
+			<input name="msg7" id="msg7" style="margin-right: 10px;">
+			<br></br>	
+			<div class= "fixed">
+                <label>Chỉ số Age:</label>
+            </div>
+			<input name="msg8" id="msg8" style="margin-right: 10px;">
+			<br></br>
+			<button class="button" value="Dự đoán" type="submit" style="margin-right: 10px;">Dự đoán</button>
+        </form>
+    </body>
+</html>

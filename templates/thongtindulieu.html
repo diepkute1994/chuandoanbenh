@@ -1,0 +1,62 @@
+<html>
+    <head>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"></script>    
+<meta charset="UTF-8">
+	<style>
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: 990000;
+	}
+
+	li {
+	  float: left;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	margin-left: 55px;
+
+	}
+
+	li a:hover {
+	  background-color: #111;
+	}
+	
+</style>
+	</head>
+		<nav class="navbar navbar-dark bg-primary justify-content-center">
+		<h3 class="text-white" align="center" style = "font-size:38px">ỨNG DỤNG HỖ TRỢ CHẨN ĐOÁN BỆNH TIỂU ĐƯỜNG BẰNG PHƯƠNG PHÁP HỌC MÁY</h3>
+	</nav>
+	<ul>
+		<li><a class="active" href="/">HỖ TRỢ CHẨN ĐOÁN</a></li>
+		<li><a href="/uploadFiledudoan">NHẬP FILE CHẨN ĐOÁN</a></li>
+		<li><a href="/thongtindulieu">THÔNG TIN DỮ LIỆU</a></li>
+		<li><a href="/ketquathinghiem">KẾT QUẢ THÍ NGHIỆM</a></li>
+		<li><a href="/thongtinsanpham">THÔNG TIN SẢN PHẨM</a></li>
+	</ul>
+    </head>
+    <body style="background-color: #e6ffee;">
+		
+		<div>
+			<h2 color="blue" align="center">THÔNG TIN DỮ LIỆU</h2>
+			<h3 style="margin-left: 150px; margin-right: 150px;">Trong trang này, chúng tôi trình bày các thông tin chi tiết và phân tích dữ luyện trước khi các huấn luyện mô hình máy học. Bộ dữ liệu chúng tôi sử dụng để huấn luyện là bộ dữ liệu Diabetes DataSet. Bộ dữ liệu này bao gồm 768 mẫu được 768 tình nguyện viên bao gồm những người bị tiểu đường và những người không bị tiểu đường. </h3>
+			<h3 style="margin-left: 150px; margin-right: 150px;"> Tập dữ liệu này bao gồm 08 thuộc tính như sau: </h3>
+            <h3 style="margin-left: 150px; margin-right: 150px;"> A: Number of times pregnant  </h3>
+			<h3 style="margin-left: 150px; margin-right: 150px;"> B: Plasma glucose concentration a 2 hours in an oral glucose tolerance test  </h3>
+			<h3 style="margin-left: 150px; margin-right: 150px;"> C: Diastolic blood pressure (mm Hg)  </h3>
+			<h3 style="margin-left: 150px; margin-right: 150px;"> D: Triceps skin fold thickness (mm)  </h3>
+			<h3 style="margin-left: 150px; margin-right: 150px;"> E: 2-Hour serum insulin (mu U/ml)  </h3>
+			<h3 style="margin-left: 150px; margin-right: 150px;"> F: Body mass index (weight in kg/(height in m)^2)  </h3>
+			<h3 style="margin-left: 150px; margin-right: 150px;"> G:Diabetes pedigree function  </h3>
+			<h3 style="margin-left: 150px; margin-right: 150px;"> H:Age  </h3>
+		</div>
+			
+    </body>
+</html>

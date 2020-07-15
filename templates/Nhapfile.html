@@ -1,0 +1,63 @@
+<html>
+    <head>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"></script>    
+<meta charset="UTF-8">
+	<style>
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: 990000;
+	}
+
+	li {
+	  float: left;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  margin-left: 55px;
+
+	}
+
+	li a:hover {
+	  background-color: #111;
+	}
+	
+	div.fixed {
+		  position: absolute;
+		  left: 350;
+	}
+</style>
+	</head>
+		<nav class="navbar navbar-dark bg-primary justify-content-center">
+		<h3 class="text-white" align="center" style = "font-size:38px">ỨNG DỤNG HỖ TRỢ CHUẨN ĐOÁN BỆNH TIỂU ĐƯỜNG BẰNG PHƯƠNG PHÁP HỌC MÁY</h3>
+	</nav>
+	<ul>
+		<li><a class="active" href="/">HỖ TRỢ CHUẨN ĐOÁN</a></li>
+		<li><a href="/uploadFiledudoan">NHẬP FILE CHUẨN ĐOÁN</a></li>
+		<li><a href="/thongtindulieu">THÔNG TIN DỮ LIỆU</a></li>
+		<li><a href="/ketquathinghiem">KẾT QUẢ THÍ NGHIỆM</a></li>
+		<li><a href="/thongtinsanpham">THÔNG TIN SẢN PHẨM</a></li>
+
+  
+	</ul>
+    </head>
+    <body style="background-color: #e6ffee;">
+		
+			<h3 align= "center" style = "font-size:20px;" >Nhập vào Choose File sau đó chọn file .csv nhấn submit lên:</h3>
+			<form action="/ketquadudoanFile" method="POST" enctype="multipart/form-data" align= "center">
+			  <input type="file" id="file" name="file" align= "center" value = "Lựa chọn File">
+			  <br></br>
+			  <span></span>
+			  <input type="submit" align= "center" value = "Nộp File">
+			</form>
+			
+		
+    </body>
+</html>

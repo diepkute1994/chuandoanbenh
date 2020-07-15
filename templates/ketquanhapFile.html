@@ -1,0 +1,73 @@
+<html>
+    <head>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"></script>    
+<meta charset="UTF-8">
+	<style>
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: 990000;
+	}
+
+	li {
+	  float: left;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  margin-left: 55px;
+
+	}
+
+	li a:hover {
+	  background-color: #111;
+	}
+	
+	div.fixed {
+		  position: absolute;
+		  left: 350;
+	}
+	table {
+		margin-left:auto; 
+		margin-right:auto;
+	}
+</style>
+	</head>
+		<nav class="navbar navbar-dark bg-primary justify-content-center">
+		<h3 class="text-white" align="center" style = "font-size:38px">ỨNG DỤNG HỖ TRỢ CHẨN ĐOÁN BỆNH TIỂU ĐƯỜNG BẰNG PHƯƠNG PHÁP HỌC MÁY</h3>
+	</nav>
+	<ul>
+		<li><a class="active" href="/">HỖ TRỢ CHẨN ĐOÁN</a></li>
+		<li><a href="/uploadFiledudoan">NHẬP FILE CHẨN ĐOÁN</a></li>
+		<li><a href="/thongtindulieu">THÔNG TIN DỮ LIỆU</a></li>
+		<li><a href="/ketquathinghiem">KẾT QUẢ THÍ NGHIỆM</a></li>
+		<li><a href="/thongtinsanpham">THÔNG TIN SẢN PHẨM</a></li>
+
+  
+	</ul>
+    </head>
+    <body style="background-color: #e6ffee;">
+		
+			
+			<div style="text-align:center; margin-top: 50px;">					
+			<a href="/exportCSV" target="blank"> <button class='btn btn-default'>Xuất File</button></a>
+			</div>
+		
+			<br></br>
+			{% for table in tables %}
+				{{ table|safe }}
+			{% endfor %}
+							
+			<form action="/uploadFiledudoan" align="center">
+			<button class="button" value="Dự đoán" type="submit" style="margin-right: 10px;">Thử lại</button>
+		</form>
+			
+		
+    </body>
+</html>
